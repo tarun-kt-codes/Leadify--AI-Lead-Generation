@@ -1,101 +1,128 @@
 
-# Leadify 🔍 – AI-Powered Lead Generation using Agentic AI
+# 🎯 Leadify - AI Lead Generation from Quora
 
-**Leadify** is an AI-driven lead generation assistant that autonomously finds and filters potential leads based on your custom criteria. Built using the Agentic AI approach, it allows for modular, explainable, and flexible lead scraping by coordinating agents with defined roles and memory.
+![Leadify Banner](res/main_page.png)
 
----
-
-## 🧠 Key Features
-
-- ✅ **Agentic Architecture** – Decentralized design using multiple AI agents
-- 🗃️ **Memory-based Iteration** – Tracks intermediate steps for context-aware reasoning
-- 🎯 **Custom Lead Criteria** – Accepts dynamic prompts and goals
-- 🖼️ **Visual Output** – Clearly displays structured lead results
-- ⚙️ **Simple Interface** – Easy-to-use form to input search criteria and launch the agent
+**Leadify** is an AI-powered lead generation application that automatically discovers potential leads from Quora conversations. Using **Firecrawl** for intelligent web search and extraction and **Groq** for natural language processing, Leadify creates a streamlined system for identifying and organizing qualified leads with minimal effort.
 
 ---
 
-## 📸 App Preview
+## 🚀 Features
 
-**Main Page**  
-![Main Page](res/main_page.png)
+- **🔍 Intelligent Query Processing**  
+  Transforms detailed user queries into focused search parameters using Groq's LLM capabilities  
 
-**Passing Arguments to the Agent**  
-![Passing Args](res/passing_args.png)
+- **🌐 Targeted Search**  
+  Uses Firecrawl's search endpoint to find relevant Quora discussions based on your business needs  
 
-**Generated Results (Sample)**  
+- **🤖 Automated Extraction**  
+  Leverages Firecrawl's Extract endpoint to pull structured user information from Quora profiles  
+
+- **📊 Lead Analytics**  
+  View metrics and insights about your generated leads at a glance  
+
+- **⚙️ Customizable Search**  
+  Control the depth and breadth of your lead research  
+
+- **📥 Excel Export**  
+  Download your leads in Excel format for seamless integration with your CRM or sales process  
+
+
+---
+
+## 🧠 How It Works
+
+1. **Describe Your Target Customer**  
+   Enter a detailed description of your ideal customer or their needs
+
+2. **AI Processing**  
+   The app uses Groq to transform your description into an optimized search query
+
+3. **Smart Web Search**  
+   Firecrawl searches Quora for relevant discussions matching your criteria
+
+4. **Lead Extraction**  
+   The app automatically extracts user profiles from these discussions
+
+5. **Organized Results**  
+   View your leads in a searchable table with key metrics and analytics
+
+**Leadify Results (Sample)**  
 | Result 1 | Result 2 | Result 3 |
 |---------|---------|---------|
 | ![Result 1](res/result_1.png) | ![Result 2](res/result_2.png) | ![Result 3](res/result_3.png) |
 
 ---
 
-## ⚙️ How It Works
+## ⚙️ Getting Started
 
-### 🧩 Agentic Pipeline
+### Prerequisites
 
-1. **User Input**: You provide the goal or criteria (e.g., “Find top LinkedIn leads in AI startups”).
-2. **Agent Planning**: The AI agent parses the goal and creates subtasks like searching, scraping, and validating.
-3. **Memory Management**: Intermediate results are stored and referred to during the reasoning process.
-4. **Lead Extraction**: Based on search and filters, structured lead data is compiled.
-5. **Final Output**: Results are displayed in a user-friendly format.
+- Python 3.8+
+- Firecrawl API key → [Get Firecrawl Key](https://www.firecrawl.dev/app/api-keys)
+- Groq API key → [Get Groq Key](https://console.groq.com/keys)
 
----
+### Installation
 
-## 🚀 How to Run Locally
-
-1. **Clone the repository**
+1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/leadify.git
-   cd leadify
+   git clone https://github.com/tarun-kt-codes/Leadify--AI-Lead-Generation.git
+   cd Leadify--AI-Lead-Generation
    ```
 
-2. **Install dependencies**
+2. **Install dependencies**:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Run the app**
+3. **Run the application**:
    ```bash
    streamlit run app.py
    ```
 
----
-
-## 🏗️ Project Structure
-
-```
-leadify/
-│
-├── app.py                # Streamlit UI with agent integration
-├── res/                  # All UI images for documentation
-│   ├── main_page.png
-│   ├── passing_args.png
-│   ├── result_1.png
-│   ├── result_2.png
-│   └── result_3.png
-├── README.md
-└── requirements.txt      # Python dependencies
-```
+4. **Open the app**:
+   Visit `http://localhost:8501` in your browser
 
 ---
 
-## 📌 Future Improvements
+## 🧪 Usage
 
-- Add lead export (CSV, PDF)
-- Integrate LinkedIn or web scraping
-- Support multi-agent tasking (planning, validation, refinement)
-- Add support for different AI models and tools
+1. **Set API Keys** in the sidebar (Firecrawl + Groq)  
+2. **Adjust Search Parameters** — number of Quora links to scan  
+3. **Enter Query** — e.g., "Find people who want mobile apps for restaurants"  
+4. **Click "Generate Leads"**  
+5. **Browse Results** — filter, search, and analyze your extracted leads  
+6. **Export as Excel** with a single click  
 
----
-
-## 🙌 Acknowledgements
-
-This app is inspired by the **Agentic AI** paradigm which emphasizes autonomous, modular AI systems capable of long-term planning and memory-aware execution.
+![Leadify Excel Export](res/excel.png)
 
 ---
 
-## 📫 Contact
+## 💡 Example Queries
 
-**Creator** – [Tarun K T](https://www.linkedin.com/in/tarunkt/)  
-📧 Feel free to connect or reach out if you'd like to collaborate!
+- "Find people looking for AI-powered chatbots for customer support"
+- "Generate leads interested in social media management services for small businesses"
+- "Discover users who need video editing software for creating YouTube content"
+- "Find potential clients looking for freelance web developers specializing in e-commerce stores"
+
+---
+
+## 🏗️ Tech Stack
+
+- **Streamlit** – Frontend web interface  
+- **Firecrawl API** – Real-time Quora crawling & scraping  
+- **Groq API** – Query analysis and NLP generation  
+- **Pandas** – Data wrangling  
+- **Pydantic** – Data validation and schemas  
+
+---
+
+## 🙌 Acknowledgments
+
+- [Firecrawl](https://www.firecrawl.dev/)
+- [Groq](https://console.groq.com/)
+- [Streamlit](https://streamlit.io/)
+
+---
+
+### ⭐ Like this project? Give it a star on GitHub and share it with your network!
