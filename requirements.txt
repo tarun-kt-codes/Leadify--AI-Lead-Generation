@@ -1,0 +1,8 @@
+streamlit
+requests
+firecrawl
+phidata
+pydantic
+pandas
+xlsxwriter
+groq
